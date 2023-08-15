@@ -1,0 +1,24 @@
+label{
+    font-size: 26px;
+}
+
+select, input{
+    width: 85%;
+}
+
+.pages{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.filterHead{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.range, .select{
+    display: grid;
+    gap: 1rem;
+}
