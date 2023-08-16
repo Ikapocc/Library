@@ -3,11 +3,17 @@ import Button from '@mui/material/Button';
 import useLecture from "../../hooks/useLecture"
 
 export default function RenderBooks({books}) {
-   const {añadirLista} = useLecture()
+   const {añadirLista, lectureList} = useLecture()
+
+   const fullList = books.filter(items => {
+    return !lectureList.some(item  => {
+      return item.book.ISBN === items.book.ISBN
+    })
+   })
 
     return(
         <ul>
-          {books.map(book => (
+          {fullList.map(book => (
             <li key={book.book.ISBN}>
               <img src={book.book.cover} alt={book.book.title} loading='lazy'></img>
               <div className='buttonData'>

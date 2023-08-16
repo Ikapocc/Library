@@ -50,7 +50,6 @@ export default function LectureProvider({children}) {
             setLectureList(prev => [...prev].filter(item => {
                 return item !== book
             }))
-            console.log("Libro borrado de la lista de lectura");
         }
     }
     
